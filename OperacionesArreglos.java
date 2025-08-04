@@ -58,7 +58,48 @@ public class OperacionesArreglos {
     }
 
 
+
+public static String encontrarRepetidos(int[] arreglo) {
+    StringBuilder resultado = new StringBuilder();
+    boolean hayRepetidos = false;
+
+    // Bucle exterior: Selecciona un número para comparar
+    for (int i = 0; i < arreglo.length; i++) {
+        // Ignora el número si ya se ha procesado
+        boolean yaContado = false;
+        for (int k = 0; k < i; k++) {
+            if (arreglo[i] == arreglo[k]) {
+                yaContado = true;
+                break;
+            }
         }
+        if (yaContado) {
+            continue;
+        }
+
+        // Bucle interior: Cuenta las repeticiones del número seleccionado
+        int conteo = 1;
+        for (int j = i + 1; j < arreglo.length; j++) {
+            if (arreglo[i] == arreglo[j]) {
+                conteo++;
+            }
+        }
+
+        // Si hay más de una ocurrencia, añade el resultado al StringBuilder
+        if (conteo > 1) {
+            resultado.append("El número ").append(arreglo[i]).append(" se repite ").append(conteo).append(" veces.\n");
+            hayRepetidos = true;
+        }
+    }
+
+    if (!hayRepetidos) {
+        resultado.append("No se encontraron números repetidos en el arreglo.");
+    }
+
+    // Retorna el texto completo
+    return resultado.toString();
+        }
+    }
     
 
 

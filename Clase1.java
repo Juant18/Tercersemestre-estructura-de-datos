@@ -36,7 +36,7 @@ public class Clase1 {
         int promedio = OperacionesArreglos.promedio(numeros);
         System.out.println("El promedio es: " + promedio);
         
-     
+  
 
       }
   
