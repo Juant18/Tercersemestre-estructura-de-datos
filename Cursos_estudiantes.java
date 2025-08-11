@@ -13,12 +13,24 @@ public class Cursos_estudiantes {
 
 
          System.out.println("-----------------------------------------------------------");
-        estudiante[] est = new estudiante[3];
+        estudiante[] est = new estudiante[5];
         est[0] = est1;
         est[1] = est2;
         est[2] = est3;
 
        System.out.println(Arrays.toString(est)); 
+
+
+
+
+       //Forma 2
+
+ est[3] = new estudiante(507080,"alex","andres","derecho");
+
+ est[4] = new estudiante(203010,"vegetta777","veguetitta","yotuber");
+
+
+
     }
 
 }
