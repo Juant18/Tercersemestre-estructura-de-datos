@@ -28,6 +28,8 @@ public class Cursos_estudiantes {
 
 System.out.println(Arrays.toString(est)); 
 
+System.out.println("-----------------------------------------------------------");
+
 for (estudiante estudiante : est) {
     System.out.println(estudiante);
 }
