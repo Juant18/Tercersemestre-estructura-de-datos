@@ -18,10 +18,7 @@ public class Cursos_estudiantes {
         est[1] = est2;
         est[2] = est3;
 
-       System.out.println(Arrays.toString(est)); 
-
-
-
+       
 
        //Forma 2
 
@@ -29,7 +26,7 @@ public class Cursos_estudiantes {
 
  est[4] = new estudiante(203010,"vegetta777","veguetitta","yotuber");
 
-
+System.out.println(Arrays.toString(est)); 
 
     }
 
