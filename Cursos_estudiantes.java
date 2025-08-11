@@ -41,4 +41,5 @@ for( int i= 0 ; i < est.length; i++){
 }
 //implementar el meotdo +matricularCursos(id: int, cursos[]:String)void
 //implementar un metodo que permita saber cuanto estudiantes hay en cada facultad
+//implementar un metodo que permita saber cuanto estudiantes hay en cada curso
 }
