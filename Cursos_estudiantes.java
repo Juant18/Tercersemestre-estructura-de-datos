@@ -24,7 +24,7 @@ public class Cursos_estudiantes {
 
  est[3] = new estudiante(507080,"alex","andres","derecho");
 
- est[4] = new estudiante(203010,"vegetta777","veguetitta","yotuber");
+ est[4] = new estudiante(203010,"vegetta777","veguetitta","youtuber");
 
 System.out.println(Arrays.toString(est)); 
 
