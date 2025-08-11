@@ -33,7 +33,11 @@ System.out.println("-----------------------------------------------------------"
 for (estudiante estudiante : est) {
     System.out.println(estudiante);
 }
+//Forma 3
 
+for( int i= 0 ; i < est.length; i++){
+    System.out.println(est[i]);
+}
 }
 
 }
