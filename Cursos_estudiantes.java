@@ -28,6 +28,10 @@ public class Cursos_estudiantes {
 
 System.out.println(Arrays.toString(est)); 
 
-    }
+for (estudiante estudiante : est) {
+    System.out.println(estudiante);
+}
+
+}
 
 }
