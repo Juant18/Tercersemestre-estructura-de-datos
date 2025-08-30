@@ -1,3 +1,4 @@
+
 public class Libro {
 
     private String titulo;
@@ -12,6 +13,10 @@ public class Libro {
     }
     public String toString(){
         return "Libro { Titulo: " + titulo + " Autor: " + autor + " Precio: " + precio + " }";
+    }
+
+    public int getPrecio() {
+        return precio;
     }
 
 public int sumartotal(Libro [] L){
