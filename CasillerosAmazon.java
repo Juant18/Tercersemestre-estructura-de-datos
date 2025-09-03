@@ -1,16 +1,16 @@
 import java.util.Scanner;
 
 class Paquete {
-    String destinatario;
-    String fechaIngreso;
+    String receptor;
+    String Fechadeentrada;
 
-    public Paquete(String destinatario, String fechaIngreso) {
-        this.destinatario = destinatario;
-        this.fechaIngreso = fechaIngreso;
+    public Paquete(String receptor, String Fechadeentrada) {
+        this.receptor = receptor;
+        this.Fechadeentrada = Fechadeentrada;
     }
 }
 
-public class SistemaCasilleros {
+public class CasillerosAmazon {
     static Paquete[] casilleros = new Paquete[36];
 
     public static void main(String[] args) {
@@ -18,27 +18,27 @@ public class SistemaCasilleros {
         int opcion;
 
         do {
-            System.out.println("\n--- Menú Principal ---");
-            System.out.println("1. Registrar paquete en casillero");
-            System.out.println("2. Consultar casilleros disponibles");
-            System.out.println("3. Información de paquete en casillero");
+            System.out.println("\n--- Menú ---");
+            System.out.println("1. Registro de paquete");
+            System.out.println("2. Consulta de casilleros disponibles");
+            System.out.println("3. Información de paquete en los casilleros");
             System.out.println("4. Salir");
             System.out.print("Seleccione una opción: ");
             opcion = sc.nextInt();
-            sc.nextLine(); // limpiar buffer
+            sc.nextLine(); 
 
             switch (opcion) {
                 case 1:
-                    registrarPaquete(sc);
+                    Paqueteregistro(sc);
                     break;
                 case 2:
-                    mostrarCasillerosDisponibles();
+                    Casillerosdisponibles();
                     break;
                 case 3:
-                    mostrarInfoPaquete(sc);
+                    Informacionpaquete(sc);
                     break;
                 case 4:
-                    System.out.println("Cerrando aplicación...");
+                    System.out.println("Proceso de cerrar App...");
                     break;
                 default:
                     System.out.println("Opción inválida, intente de nuevo.");
@@ -49,7 +49,7 @@ public class SistemaCasilleros {
     }
 
     // Método para obtener el tamaño del casillero según su número
-    public static String obtenerTamanioCasillero(int numero) {
+    public static String obtenerTamañoCasillero(int numero) {
         if (numero >= 1 && numero <= 8) {
             return "Mediano";
         } else if (numero >= 9 && numero <= 22) {
@@ -61,24 +61,24 @@ public class SistemaCasilleros {
         }
     }
 
-    public static void registrarPaquete(Scanner sc) {
+    public static void Paqueteregistro(Scanner sc) {
         // Mostrar casilleros disponibles con tamaño
         System.out.println("Casilleros disponibles:");
-        boolean hayDisponibles = false;
+        boolean Losdisponibles = false;
         for (int i = 0; i < casilleros.length; i++) {
             if (casilleros[i] == null) {
-                System.out.println("Casillero #" + (i + 1) + " - " + obtenerTamanioCasillero(i + 1));
-                hayDisponibles = true;
+                System.out.println("Casillero #" + (i + 1) + " - " + obtenerTamañoCasillero(i + 1));
+                Losdisponibles = true;
             }
         }
-        if (!hayDisponibles) {
+        if (Losdisponibles) {
             System.out.println("No hay casilleros disponibles.");
             return;
         }
 
-        System.out.print("Ingrese número de casillero para asignar (1-36): ");
+        System.out.print("Ingrese número de casillero para ser asginado (1-36): ");
         int casilleroElegido = sc.nextInt();
-        sc.nextLine(); // limpiar buffer
+        sc.nextLine(); 
 
         if (casilleroElegido < 1 || casilleroElegido > 36) {
             System.out.println("Número de casillero inválido.");
@@ -96,15 +96,15 @@ public class SistemaCasilleros {
         String fechaIngreso = sc.nextLine();
 
         casilleros[casilleroElegido - 1] = new Paquete(destinatario, fechaIngreso);
-        System.out.println("Paquete registrado en casillero #" + casilleroElegido + " (" + obtenerTamanioCasillero(casilleroElegido) + ")");
+        System.out.println("Paquete registrado en casillero #" + casilleroElegido + " (" + obtenerTamañoCasillero(casilleroElegido) + ")");
     }
 
-    public static void mostrarCasillerosDisponibles() {
+    public static void Casillerosdisponibles() {
         System.out.println("Casilleros disponibles:");
         boolean hayDisponibles = false;
         for (int i = 0; i < casilleros.length; i++) {
             if (casilleros[i] == null) {
-                System.out.println("Casillero #" + (i + 1) + " - " + obtenerTamanioCasillero(i + 1));
+                System.out.println("Casillero #" + (i + 1) + " - " + obtenerTamañoCasillero(i + 1));
                 hayDisponibles = true;
             }
         }
@@ -113,7 +113,7 @@ public class SistemaCasilleros {
         }
     }
 
-    public static void mostrarInfoPaquete(Scanner sc) {
+    public static void Informacionpaquete(Scanner sc) {
         System.out.print("Ingrese número de casillero (1-36): ");
         int num = sc.nextInt();
         sc.nextLine(); // limpiar buffer
@@ -127,9 +127,9 @@ public class SistemaCasilleros {
         if (p == null) {
             System.out.println("El casillero #" + num + " está vacío.");
         } else {
-            System.out.println("Información del paquete en casillero #" + num + " (" + obtenerTamanioCasillero(num) + "):");
-            System.out.println("Destinatario: " + p.destinatario);
-            System.out.println("Fecha de ingreso: " + p.fechaIngreso);
+            System.out.println("Información del paquete en casillero #" + num + " (" + obtenerTamañoCasillero(num) + "):");
+            System.out.println("Destinatario: " + p.receptor);
+            System.out.println("Fecha de ingreso: " + p.Fechadeentrada);
         }
     }
 }
