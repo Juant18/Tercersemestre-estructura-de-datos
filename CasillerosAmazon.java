@@ -90,7 +90,7 @@ public class CasillerosAmazon {
             return;
         }
 
-        System.out.print("Ingrese nombre del destinatario: ");
+        System.out.print("Ingrese nombre del receptor ");
         String destinatario = sc.nextLine();
         System.out.print("Ingrese fecha de ingreso (dd/mm/aaaa): ");
         String fechaIngreso = sc.nextLine();
