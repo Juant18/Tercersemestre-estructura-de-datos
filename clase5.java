@@ -4,7 +4,7 @@ public class clase5 {
         int[][] m = new int[filas][columnas];
         for (int i = 0; i < m.length; i++) {
 
-            for (int j = 0; j < m[i].length; j++) {
+            for (int j = 0; j <    m[i].length; j++) {
 
                 m[i][j] = (int) ((Math.random() * (9-1)+1)) + 1;
             }
