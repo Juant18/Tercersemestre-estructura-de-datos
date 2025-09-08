@@ -5,7 +5,7 @@ public class CasillerosAmazon {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int opcion;
+        int opciones;
 
         do {
             System.out.println("\n--- Menú ---");
@@ -14,10 +14,10 @@ public class CasillerosAmazon {
             System.out.println("3. Información de paquete en los casilleros");
             System.out.println("4. Salir");
             System.out.print("Seleccione una opción: ");
-            opcion = sc.nextInt();
+            opciones = sc.nextInt();
             sc.nextLine(); 
 
-            switch (opcion) {
+            switch (opciones) {
                 case 1:
                     Paqueteregistro(sc);
                     break;
