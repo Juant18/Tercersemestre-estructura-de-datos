@@ -42,7 +42,7 @@ public class CasillerosAmazon {
                 default:
                     System.out.println("Opción inválida, intente de nuevo.");
             }
-        } while (opcion != 4);
+        } while (opciones != 4);
 
         sc.close();
     }
