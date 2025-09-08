@@ -1,15 +1,5 @@
 import java.util.Scanner;
 
-class Paquete {
-    String receptor;
-    String Fechadeentrada;
-
-    public Paquete(String receptor, String Fechadeentrada) {
-        this.receptor = receptor;
-        this.Fechadeentrada = Fechadeentrada;
-    }
-}
-
 public class CasillerosAmazon {
     static Paquete[] casilleros = new Paquete[36];
 
