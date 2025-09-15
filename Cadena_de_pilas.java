@@ -30,7 +30,7 @@ public class Cadena_de_pilas {
             p.pop();
         }
 
-        System.out.println(contador1 == contador2 ? "Equlibrados" : "No Equlibrados");
+        System.out.println(contador1 == contador2 ? "Equilibrados" : "No Equlibrados");
 
         
     }  
