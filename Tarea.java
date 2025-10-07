@@ -1,3 +1,4 @@
+
 // Clase Tarea
 class Tarea {
     private String id;
@@ -46,5 +47,12 @@ class Tarea {
 
     public void setTiempoProcesamiento(long tiempoProcesamiento) {
         this.tiempoProcesamiento = tiempoProcesamiento;
+    }
+
+    @Override
+    public String toString() {
+        return "Tarea{id='" + id + "', descripcion='" + descripcion + "', prioridad=" + prioridad +
+               ", tiempoLlegada=" + tiempoLlegada + ", completada=" + completada +
+               ", tiempoProcesamiento=" + tiempoProcesamiento + "}";
     }
 }
