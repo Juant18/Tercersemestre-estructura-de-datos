@@ -132,7 +132,7 @@ public class mini_proyecto {
         gestor.agregarTarea(tarea4);
         gestor.agregarTarea(tarea5);
         gestor.mostrarEstadoSistema();
- //return dos;
+
 
         System.out.println("\n=== Procesando Tareas ===");
         Tarea procesada1 = gestor.procesarSiguienteTarea(); // Debe procesar T4 (última alta)
