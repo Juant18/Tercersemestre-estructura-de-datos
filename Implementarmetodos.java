@@ -36,19 +36,19 @@ public class Implementarmetodos {
     //Tarea eliminar = null;
 
     //if (pila.isEmpty()) {
-        eliminar = pila.pop(); 
+        //eliminar = pila.pop(); 
         
     
         
       //  System.out.println("tarea eliminada " + eliminar.getId());
    // } else {
-        System.out.println("No hay tareas para eliminar.");
-    }
+      //  System.out.println("No hay tareas para eliminar.");
+    //}
 
-    return eliminar;
-}
-  Tarea eliminada1 = gestor.eliminar();  
-         return eliminada1;
+  //  return eliminar;
+//}
+  //Tarea eliminada1 = gestor.eliminar();  
+        // return eliminada1;
 
         // --- Acceso y Búsqueda ---
         System.out.println("\n--- Acceso y Búsqueda ---");

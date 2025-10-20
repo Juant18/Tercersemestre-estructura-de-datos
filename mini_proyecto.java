@@ -145,7 +145,7 @@ public class mini_proyecto {
         System.out.println("Estado de T2: " + gestor.consultarEstadoTarea("T2")); // Pendiente
         System.out.println("Estado de T3: " + gestor.consultarEstadoTarea("T3")); // Completada
         System.out.println("Estado de T6: " + gestor.consultarEstadoTarea("T6")); // No encontrado
-//Tarea 1 = gestor.eliminar();  
+//Tarea 1 = gestor.dos();  
         // return 1;
         System.out.println("\n=== Procesando Tareas Restantes ===");
         Tarea procesada4 = gestor.procesarSiguienteTarea(); // T2
