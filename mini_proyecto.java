@@ -47,7 +47,7 @@ public class mini_proyecto {
     }
 
     public String consultarEstadoTarea(String idTarea) {
-        if (registro.containsKey(idTarea)) {
+        if (registro(idTarea)) {
             return "Completada";
         }
 
