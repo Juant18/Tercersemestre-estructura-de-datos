@@ -32,6 +32,23 @@ public class Implementarmetodos {
         System.out.println("\n--- Modificación de Elementos ---");
         nombres.set(1, "Daniela");
         System.out.println("Vector después de 'set()': " + nombres);
+          //public Tarea eliminar() {
+    //Tarea eliminar = null;
+
+    //if (pila.isEmpty()) {
+        eliminar = pila.pop(); 
+        
+    
+        
+      //  System.out.println("tarea eliminada " + eliminar.getId());
+   // } else {
+        System.out.println("No hay tareas para eliminar.");
+    }
+
+    return eliminar;
+}
+  Tarea eliminada1 = gestor.eliminar();  
+         return eliminada1;
 
         // --- Acceso y Búsqueda ---
         System.out.println("\n--- Acceso y Búsqueda ---");

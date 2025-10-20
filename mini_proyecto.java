@@ -9,6 +9,7 @@ public class mini_proyecto {
     private Deque<Tarea> pila = new ArrayDeque<>();
     private Map<String, String> registro = new HashMap<>();
 
+
     public void agregarTarea(Tarea tarea) {
         if (tarea.getPrioridad() == 3) {
             pila.push(tarea);
@@ -18,6 +19,7 @@ public class mini_proyecto {
         System.out.println("Tarea agregada: " + tarea.getId() + " (Prioridad: " + tarea.getPrioridad() + ")");
     }
 
+//System.out.println(" " + dos.getId());
     public Tarea procesarSiguienteTarea() {
         Tarea tarea = null;
         if (!pila.isEmpty()) {
@@ -30,7 +32,10 @@ public class mini_proyecto {
             System.out.println("No hay tareas para procesar.");
             return null;
         }
+////Tarea dos = null;
 
+    //if (pila.isEmpty()) {
+       // dos = pila.pop();
         tarea.setCompletada(true);
         long tiempoProcesamiento = System.currentTimeMillis();
         tarea.setTiempoProcesamiento(tiempoProcesamiento);
@@ -58,7 +63,7 @@ public class mini_proyecto {
 
         return "ID no encontrado";
     }
-
+// public tarea dos(){}
     private boolean estaEnPila(String id) {
         for (Tarea t : pila) {
             if (t.getId().equals(id)) {
@@ -84,13 +89,13 @@ public class mini_proyecto {
     public int getTamañoPila() {
         return pila.size();
     }
-
     public int getTareasCompletadas() {
         return registro.size();
     }
 
 
-
+   
+  
  
     public void mostrarEstadoSistema() {
         System.out.println("=== Estado del Sistema ===");
@@ -127,6 +132,7 @@ public class mini_proyecto {
         gestor.agregarTarea(tarea4);
         gestor.agregarTarea(tarea5);
         gestor.mostrarEstadoSistema();
+ //return dos;
 
         System.out.println("\n=== Procesando Tareas ===");
         Tarea procesada1 = gestor.procesarSiguienteTarea(); // Debe procesar T4 (última alta)
@@ -139,7 +145,8 @@ public class mini_proyecto {
         System.out.println("Estado de T2: " + gestor.consultarEstadoTarea("T2")); // Pendiente
         System.out.println("Estado de T3: " + gestor.consultarEstadoTarea("T3")); // Completada
         System.out.println("Estado de T6: " + gestor.consultarEstadoTarea("T6")); // No encontrado
-
+//Tarea 1 = gestor.eliminar();  
+        // return 1;
         System.out.println("\n=== Procesando Tareas Restantes ===");
         Tarea procesada4 = gestor.procesarSiguienteTarea(); // T2
         Tarea procesada5 = gestor.procesarSiguienteTarea(); // T5
@@ -152,5 +159,10 @@ public class mini_proyecto {
 
         System.out.println("\n=== Intentando Procesar Sin Tareas ===");
         Tarea procesada6 = gestor.procesarSiguienteTarea(); // null
+
+          
+      
     }
+
+ 
 }
