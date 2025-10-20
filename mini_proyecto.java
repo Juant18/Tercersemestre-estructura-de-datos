@@ -36,7 +36,7 @@ public class mini_proyecto {
         tarea.setTiempoProcesamiento(tiempoProcesamiento);
 
         String infoTrazabilidad = "Completada - Llegada: " + tarea.getTiempoLlegada() +
-                " - Procesada: " + tiempoProcesamiento;
+                "  Procesada: " + tiempoProcesamiento;
         registro.put(tarea.getId(), infoTrazabilidad);
 
         System.out.println("Tarea procesada: " + tarea.toString());
@@ -76,11 +76,11 @@ public class mini_proyecto {
         return false;
     }
 
-    public int getTamanoCola() {
+    public int getTamañoCola() {
         return cola.size();
     }
 
-    public int getTamanoPila() {
+    public int getTamañoPila() {
         return pila.size();
     }
 
@@ -90,8 +90,8 @@ public class mini_proyecto {
 
     public void mostrarEstadoSistema() {
         System.out.println("=== Estado del Sistema ===");
-        System.out.println("Tareas en Cola (Prioridad Baja/Media): " + getTamanoCola());
-        System.out.println("Tareas en Pila (Prioridad Alta): " + getTamanoPila());
+        System.out.println("Tareas en Cola (Prioridad Baja/Media): " + getTamañoCola());
+        System.out.println("Tareas en Pila (Prioridad Alta): " + getTamañoPila());
         System.out.println("Tareas Completadas: " + getTareasCompletadas());
         System.out.println("Tareas Pendientes en Cola: ");
         for (Tarea t : cola) {
