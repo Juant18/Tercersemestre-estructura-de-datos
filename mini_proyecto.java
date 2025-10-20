@@ -19,7 +19,6 @@ public class mini_proyecto {
         System.out.println("Tarea agregada: " + tarea.getId() + " (Prioridad: " + tarea.getPrioridad() + ")");
     }
 
-//System.out.println(" " + dos.getId());
     public Tarea procesarSiguienteTarea() {
         Tarea tarea = null;
         if (!pila.isEmpty()) {
@@ -32,10 +31,8 @@ public class mini_proyecto {
             System.out.println("No hay tareas para procesar.");
             return null;
         }
-////Tarea dos = null;
 
-    //if (pila.isEmpty()) {
-       // dos = pila.pop();
+
         tarea.setCompletada(true);
         long tiempoProcesamiento = System.currentTimeMillis();
         tarea.setTiempoProcesamiento(tiempoProcesamiento);
@@ -63,7 +60,7 @@ public class mini_proyecto {
 
         return "ID no encontrado";
     }
-// public tarea dos(){}
+
     private boolean estaEnPila(String id) {
         for (Tarea t : pila) {
             if (t.getId().equals(id)) {
