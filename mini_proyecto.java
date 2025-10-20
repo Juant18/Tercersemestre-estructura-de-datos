@@ -45,9 +45,10 @@ public class mini_proyecto {
 
         return tarea;
     }
+  
 
     public String consultarEstadoTarea(String idTarea) {
-        if (registro(idTarea)) {
+        if (registro.containsKey(idTarea)) {
             return "Completada";
         }
 
@@ -88,6 +89,9 @@ public class mini_proyecto {
         return registro.size();
     }
 
+
+
+ 
     public void mostrarEstadoSistema() {
         System.out.println("=== Estado del Sistema ===");
         System.out.println("Tareas en Cola (Prioridad Baja/Media): " + getTamañoCola());

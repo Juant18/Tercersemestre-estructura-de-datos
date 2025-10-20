@@ -1,26 +1,15 @@
+   public Tarea eliminar() {
+    Tarea eliminar = null;
 
-public boolean eliminarTarea(String idTarea) {
- 
-    if (estaEnPila(idTarea)) {
-   
-        boolean removidaDePila = pila.removeIf(t -> t.getId().equals(idTarea));
+    if (!pila.isEmpty()) {
+        eliminar = pila.pop(); 
         
-        if (removidaDePila) {
-            System.out.println(" Tarea eliminada de la Pila (Alta Prioridad): " + idTarea);
-            return true;
-        }
-    }
-
-    if (estaEnCola(idTarea)) {
-     
-        boolean removidaDeCola = cola.removeIf(t -> t.getId().equals(idTarea));
-        
-        if (removidaDeCola) {
-            System.out.println(" Tarea eliminada de la Cola (Prioridad Normal): " + idTarea);
-            return true;
-        }
-    }
     
+        
+        System.out.println("Tarea deshecha de la PILA: " + eliminar.getId());
+    } else {
+        System.out.println("No hay tareas en la PILA para deshacer.");
+    }
 
-
+    return eliminar;
 }
