@@ -20,7 +20,7 @@ public class Transaccion {
         this.idCuentaDestino = idCuentaDestino;//Se usa para transacciones que sí requieren una cuenta destino
         this.monto = monto;
     }
-
+//metodos
     public String getTipo() {
         return tipo;
     }
