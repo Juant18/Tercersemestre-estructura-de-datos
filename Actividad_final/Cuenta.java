@@ -3,7 +3,7 @@ package Actividad_final;
 public class Cuenta {
     //clase de la cuenta bancaria
     private int idCuenta;
-    private String Nombreusuario;
+    String Nombreusuario;
     private double Dinero;
 
     public Cuenta(int idCuenta, String Nombreusuario, double saldoInicial) {
