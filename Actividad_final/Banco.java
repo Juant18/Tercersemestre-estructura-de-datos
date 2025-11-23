@@ -74,11 +74,9 @@ public class Banco {
     }
     
     // ********************************************
-    // *** MÉTODOS NUCLEARES MODIFICADOS ****
+    // *** MÉTODOS NUCLEARES  ****
     // ********************************************
 
-    // REEMPLAZO COMPLETO: Crea la cuenta y la inserta en el BST
-    // Crear cuenta
     public void crearCuenta(int idCuenta, String nombre, double saldoInicial) {
         if (buscarCuenta(idCuenta) == null) { // buscarCuenta ya usa el BST
             Cuenta nuevaCuenta = new Cuenta(idCuenta, nombre, saldoInicial);
