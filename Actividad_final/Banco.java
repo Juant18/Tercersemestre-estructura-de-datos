@@ -89,18 +89,10 @@ public class Banco {
 
     // Actualizar cuenta 
     public void actualizarCuenta(int idCuenta, String nuevoNombre) {
-        // La cuenta se busca ahora usando el BST
+     
         Cuenta cuenta = buscarCuenta(idCuenta); 
         if (cuenta != null) {
-            // NOTA: Para no reconstruir el BST por un cambio menor, solo se actualiza el objeto en el heap
-            // y se mantiene el BST inalterado, ya que el ID (clave de ordenamiento) no cambia.
-            // Para la lista, se elimina y se reinserta para asegurar consistencia del ArrayList si el objeto es inmutable
-            
-            // Eliminamos de la lista la cuenta antigua (necesario si Cuenta fuera inmutable)
-            // Ya que 'cuentas' se usa solo para QuickSort, no es ideal buscar aquí.
-            // Para simplicidad, dado que en Java la cuenta es mutable, se podría solo actualizar el nombre en el objeto 'cuenta'.
-            
-            // Asumiendo que la lista 'cuentas' debe reflejar exactamente el estado:
+      
             cuentas.removeIf(c -> c.getIdCuenta() == idCuenta);
             cuentas.add(new Cuenta(idCuenta, nuevoNombre, cuenta.getSaldo())); 
             
