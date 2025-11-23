@@ -45,8 +45,7 @@ public class Banco {
     // *** IMPLEMENTACIÓN DE BÚSQUEDA BINARIA (BST) ***
     // **********************************************
     
-    // REEMPLAZO COMPLETO: Ahora utiliza la Búsqueda Binaria sobre el BST
-    // Buscar cuenta (Implementación con Búsqueda Binaria BST)
+
     public Cuenta buscarCuenta(int idCuenta) {
         return busquedaBinariaRec(raizBST, idCuenta);
     }
