@@ -76,7 +76,7 @@ public class Banco {
     public void crearCuenta(int idCuenta, String nombre, double saldoInicial) {
         if (buscarCuenta(idCuenta) == null) { // buscarCuenta ya usa el BST
             Cuenta nuevaCuenta = new Cuenta(idCuenta, nombre, saldoInicial);
-            cuentas.add(nuevaCuenta); // Se mantiene la lista para QuickSort
+            cuentas.add(nuevaCuenta); 
             insertarEnBST(nuevaCuenta); // Se inserta en el Árbol
         } else {
             throw new IllegalArgumentException("La cuenta ya existe.");
