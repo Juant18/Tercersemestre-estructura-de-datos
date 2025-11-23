@@ -72,10 +72,6 @@ public class Banco {
             return busquedaBinariaRec(raiz.derecha, idCuenta);
         }
     }
-    
-    // ********************************************
-    // *** MÉTODOS NUCLEARES  ****
-    // ********************************************
 
     public void crearCuenta(int idCuenta, String nombre, double saldoInicial) {
         if (buscarCuenta(idCuenta) == null) { // buscarCuenta ya usa el BST
@@ -105,15 +101,14 @@ public class Banco {
     }
 
     // Eliminar cuenta (Solo eliminamos de la lista 'cuentas' por simplicidad,
-    // La eliminación de un nodo de un BST es más compleja y se omite para enfocarse en la inserción/búsqueda).
+
     public void eliminarCuenta(int idCuenta) {
         Cuenta cuenta = buscarCuenta(idCuenta);
         if (cuenta != null && cuenta.getSaldo() == 0) {
-            // Solo se elimina del ArrayList usado para informes. 
-            // La eliminación eficiente del BST requiere un algoritmo de eliminación de nodos.
+           
             cuentas.removeIf(c -> c.getIdCuenta() == idCuenta);
             
-            // Idealmente, se llamaría a eliminarNodoBST(idCuenta)
+          
             
         } else {
             throw new IllegalArgumentException("Cuenta no encontrada o tiene saldo.");
