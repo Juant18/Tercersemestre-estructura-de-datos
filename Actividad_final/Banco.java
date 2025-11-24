@@ -65,7 +65,7 @@ public class Banco {
     }
 
     public void crearCuenta(int idCuenta, String nombre, double saldoInicial) {
-        if (buscarCuenta(idCuenta) == null) { // buscarCuenta ya usa el BST
+        if (buscarCuenta(idCuenta) == null) { // buscarCuenta 
             Cuenta nuevaCuenta = new Cuenta(idCuenta, nombre, saldoInicial);
             cuentas.add(nuevaCuenta); 
             insertarEnBST(nuevaCuenta); // Se inserta en el Árbol
