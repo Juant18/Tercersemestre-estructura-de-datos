@@ -3,7 +3,7 @@ package Actividad_final;
 import java.util.Scanner;
 
 // Clase principal para interactuar con el sistema bancario
-public class Principal {
+public class Principal_Main {
     public static void main(String[] args) {
         Banco banco = new Banco();
         Scanner scanner = new Scanner(System.in);
