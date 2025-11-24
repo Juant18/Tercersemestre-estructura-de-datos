@@ -8,31 +8,27 @@ import java.util.Queue;
 
 // Creacion de clase que tiene el crear cuenta, actualizar etc.
 public class Banco {
-    private ArrayList<Cuenta> cuentas; // Lista para QuickSort y Mostrar
-    private Queue<Transaccion> colaTransacciones; // Cola para procesar transacciones pendientes 
-    private NodoCuenta raizBST; // NUEVO: Raíz del Árbol de Búsqueda Binaria
+    private ArrayList<Cuenta> cuentas; 
+    private Queue<Transaccion> colaTransacciones; 
+    private NodoCuenta raizBST; 
 
     public Banco() {
         cuentas = new ArrayList<>();
         colaTransacciones = new LinkedList<>();
-        raizBST = null; // Inicializa el BST vacío
+        raizBST = null; 
     }
 
-    // **********************************************
-    // *** IMPLEMENTACIÓN DE ÁRBOL DE BÚSQUEDA BINARIA (BST) ***
-    // **********************************************
-
-    // Método principal para insertar una cuenta en el BST
+   
     private void insertarEnBST(Cuenta nuevaCuenta) {
         raizBST = insertarRec(raizBST, nuevaCuenta);
     }
 
-    // Método recursivo para insertar en el BST
+
     private NodoCuenta insertarRec(NodoCuenta raiz, Cuenta nuevaCuenta) {
         if (raiz == null) {
             return new NodoCuenta(nuevaCuenta);
         }
-        // Las cuentas se ordenan por su ID (criterio de búsqueda)
+
         if (nuevaCuenta.getIdCuenta() < raiz.cuenta.getIdCuenta()) {
             raiz.izquierda = insertarRec(raiz.izquierda, nuevaCuenta);
         } else if (nuevaCuenta.getIdCuenta() > raiz.cuenta.getIdCuenta()) {
@@ -41,16 +37,12 @@ public class Banco {
         return raiz;
     }
 
-    // **********************************************
-    // *** IMPLEMENTACIÓN DE BÚSQUEDA BINARIA (BST) ***
-    // **********************************************
-    
 
     public Cuenta buscarCuenta(int idCuenta) {
         return busquedaBinariaRec(raizBST, idCuenta);
     }
 
-    // Método auxiliar recursivo para la Búsqueda Binaria
+
     private Cuenta busquedaBinariaRec(NodoCuenta raiz, int idCuenta) {
         if (raiz == null) {
             return null; // Cuenta no encontrada
